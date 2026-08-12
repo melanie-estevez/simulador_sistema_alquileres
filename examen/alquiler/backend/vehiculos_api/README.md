@@ -1,2 +1,1 @@
-# sistema_gestion_alquileres
-# sistema_gestion_alquileres
+# simulador_sistema_alquileres
