@@ -1,2 +1,0 @@
-django-admin startproject config .
-python manage.py startapp manufactura
