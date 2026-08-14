@@ -12,7 +12,7 @@ export type Vehicle = {
   plate:string;
   brand: string;
   daily_rate: number;
-  is_available: string;
+  is_available: boolean;
 };
 
 export async function listVehiclesPublicApi() {

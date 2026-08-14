@@ -32,6 +32,7 @@ export default function PublicRentalsPage() {
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
+              <TableCell>Vehículo</TableCell>
               <TableCell>Nombre Cliente</TableCell>
               <TableCell>Total</TableCell>
               <TableCell>Estado</TableCell>
@@ -42,6 +43,7 @@ export default function PublicRentalsPage() {
             {items.map((r) => (
               <TableRow key={r.id}>
                 <TableCell>{r.id}</TableCell>
+                <TableCell>{r.vehicle}</TableCell>
                 <TableCell>{r.customer_name}</TableCell>
                 <TableCell>{r.total}</TableCell>
                 <TableCell>{r.status}</TableCell>

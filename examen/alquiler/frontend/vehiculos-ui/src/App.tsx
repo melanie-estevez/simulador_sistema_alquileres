@@ -11,6 +11,7 @@ import AdminVehiclesPage from "./pages/AdminVehiclePage";
 
 
 import RequireAuth from "./components/RequireAuth";
+import AdminRentalPage from "./pages/AdminRentalPage";
 
 export default function App() {
   return (
@@ -45,7 +46,14 @@ export default function App() {
             </RequireAuth>
           }
         />
-
+        <Route
+          path="/admin/alquileres"
+          element={
+            <RequireAuth>
+              <AdminRentalPage />
+            </RequireAuth>
+          }
+        />
        
 
         <Route

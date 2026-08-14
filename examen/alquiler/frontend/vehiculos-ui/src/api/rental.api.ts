@@ -9,6 +9,7 @@ export type Paginated<T> = {
 
 export type Rental = {
   id: number;
+  vehicle: number;
   customer_name: string;
   total: number;
   status: string;
