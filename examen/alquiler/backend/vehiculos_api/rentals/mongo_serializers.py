@@ -10,17 +10,20 @@ class Sources:
 
 class Action:
     CREATED = "creado"
+    UPDATED = "actualizado"
     MAINTENANCE = "mantenimiento"
     DISABLED = "deshabilitado"
 
     CHOICES = [
         (CREATED, "Creado"),
+        (UPDATED, "actualizado"),
         (MAINTENANCE, "Mantenimiento"),
         (DISABLED, "Deshabilitado"),
     ]
 
     
 class FleetLogSerializer(serializers.Serializer):
+    vehicle_id = serializers.IntegerField()
     note = serializers.CharField(max_length=120)
     source = serializers.ChoiceField(
         choices=Sources.CHOICES,
@@ -61,15 +64,15 @@ class Source:
 
     
 class RentalEventSerializer(serializers.Serializer):
+    rental_id = serializers.IntegerField()
     event_type = serializers.ChoiceField(
         choices=EventType.CHOICES,
         default=EventType.CREATED
-    )      
-    fleet_log_id = serializers.CharField()    
+    )       
     source = serializers.ChoiceField(
         choices=Source.CHOICES,
         default=Source.WEB
     )
-    notes = serializers.CharField()
+    note = serializers.CharField()
     created_at = serializers.DateField(required=False)
     
