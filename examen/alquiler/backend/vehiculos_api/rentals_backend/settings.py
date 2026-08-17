@@ -98,6 +98,8 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     os.getenv("CORS_ORIGIN", "http://localhost:5173"),
     "http://127.0.0.1:5173",
+    "http://localhost:8081",
+    "http://127.0.0.1:8081",
 ]
 
 # Mongo settings
